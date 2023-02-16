@@ -21,6 +21,9 @@ namespace Bank
     {
         static void Main(string[] args)
         {
+            Conta c = new Conta();
+            Console.WriteLine("Nome: "+ c);
+            Console.ReadKey();
         }
     }
 
@@ -56,5 +59,14 @@ namespace Bank
         /// <param name="data">Quando</param>
         /// <param name="desc">Motivo</param>
         public void Depositar(decimal valor, DateTime data, string desc) {}
+
+        /// <summary>
+        /// Retorna o nome do dono da conta
+        /// </summary>
+        /// <returns>Nome da conta</returns>
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }
