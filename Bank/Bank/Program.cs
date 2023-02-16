@@ -22,7 +22,10 @@ namespace Bank
         static void Main(string[] args)
         {
             Conta c = new Conta();
+            Conta d = new Conta("Afonso",1000);
+
             Console.WriteLine("Nome: "+ c);
+            Console.WriteLine("Nome: " + d);
             Console.ReadKey();
         }
     }
@@ -32,9 +35,9 @@ namespace Bank
     /// </summary>
     public class Conta
     {
-        string Nome { get; set; }
-        int NumConta { get; }
-        decimal Saldo { get; }
+        public string Nome { get; set; }
+        public int NumConta { get; }
+        public decimal Saldo { get; }
 
         /// <summary>
         /// Construtor padrão para @nome = "Anônimo"
@@ -42,6 +45,16 @@ namespace Bank
         public Conta()
         {
             Nome = "Anônimo";
+        }
+
+        /// <summary>
+        /// Construtor para nome e saldo
+        /// </summary>
+        /// <param name="nome">Dono da conta</param>
+        /// <param name="saldoInicial">Valor inicial</param>
+        public Conta(string nome, decimal saldoInicial) {
+            this.Nome = nome;
+            this.Saldo = saldoInicial;
         }
 
         /// <summary>
