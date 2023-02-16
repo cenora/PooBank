@@ -66,6 +66,7 @@ namespace Bank
         /// <returns>Nome da conta</returns>
         public override string ToString()
         {
+            //return base.ToString();
             return Nome;
         }
     }
