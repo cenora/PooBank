@@ -35,6 +35,8 @@ namespace Bank
     /// </summary>
     public class Conta
     {
+        private static int sementeConta = 0123456789;
+
         public string Nome { get; set; }
         public int NumConta { get; }
         public decimal Saldo { get; }
